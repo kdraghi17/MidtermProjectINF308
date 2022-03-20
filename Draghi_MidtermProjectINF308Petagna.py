@@ -83,4 +83,20 @@ def view_inventory():
     for key, value in sorted(inventory.items()):
         print(key + ":", value)
     main()
+
+# Function to clear the inventory
+def clear_inventory():
+
+    # Ask the user if they are sure they want to clear their inventory using while loop for user error
+    while True:
+        user_answer = input("Are you sure you want to clear your inventory?(Y/N): ").lower().strip()
+        if user_answer == "y":
+            inventory.clear() # Clear inventory
+            print("Inventory successfully cleared.")
+            break
+        elif user_answer == "n":
+            break
+        else:
+            print("Invalid input. Please try again.")
+    main()
     
