@@ -25,3 +25,18 @@ def add_to_inventory():
             continue
         else:
             break
+
+    # Loop through amount user enters and add item(s) and their amount
+    for item in range(0, n):
+        item = input("Enter item you want to add to your inventory: ").lower().strip()
+        while True:
+            try:
+                amount = int(input("Enter the amount of item: "))
+            except ValueError:
+                print("Invalid input. Not an integer. Please try again.")
+                continue
+            else:
+                break
+        inventory[item] = amount
+        print("Item successfully added!")
+    main()
