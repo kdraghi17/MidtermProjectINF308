@@ -113,4 +113,7 @@ def quit_program():
         else:
             print("Invalid input. Please try again.")
     main()
+
+# main part of program
+def main():
     
