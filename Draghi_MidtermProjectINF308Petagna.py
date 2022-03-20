@@ -116,4 +116,7 @@ def quit_program():
 
 # main part of program
 def main():
+
+    # Add menu function
+    mainMenu()
     
