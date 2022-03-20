@@ -74,4 +74,8 @@ def update_inventory():
         else:
             item = input("Item does not exist. Please try again. Enter item you want to update in your inventory(Type 'quit' to end): ").lower().strip()
     main()
+
+# Function to view user's inventory
+def view_inventory():
+    print("Below is your inventory: ")
     
