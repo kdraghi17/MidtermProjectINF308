@@ -44,3 +44,13 @@ def add_to_inventory():
 # Prompt user to enter the item(s) they want to remove from the inventory
 def remove_from_inventory():
     item = input("Enter item you want to remove from your inventory(Type 'quit' to end): ").lower().strip()
+
+    # While loop for user to enter item(s) they want to remove until they want to quit
+    while item != "quit":
+        if item in inventory.keys():
+            del inventory[item]
+            item = input("Item successfully removed. Enter item you want to remove from your inventory(Type 'quit' to end): ").lower().strip()
+        else:
+            item = input("Item does not exist. Please try again. Enter item you want to remove from your inventory(Type 'quit' to end): ").lower().strip()
+    main()
+    
