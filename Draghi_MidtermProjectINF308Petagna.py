@@ -57,4 +57,21 @@ def remove_from_inventory():
 # Prompt user to enter the item they want to update the value for
 def update_inventory():
     item = input("Enter item you want to update in your inventory(Type 'quit' to end): ").lower().strip()
+
+    # While loop for user to enter item(s) they want to update until they want to quit
+    while item != "quit":
+        if item in inventory.keys():
+            while True:
+                try:
+                    amount = int(input("Enter new item amount: "))
+                except ValueError:
+                    print("Invalid input. Not an integer. Please try again.")
+                    continue
+                else:
+                    break
+            inventory[item] = amount
+            item = input("Item amount updated! Enter another item you want to update in your inventory(Type 'quit' to end): ").lower().strip()
+        else:
+            item = input("Item does not exist. Please try again. Enter item you want to update in your inventory(Type 'quit' to end): ").lower().strip()
+    main()
     
