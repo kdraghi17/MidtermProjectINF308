@@ -40,3 +40,7 @@ def add_to_inventory():
         inventory[item] = amount
         print("Item successfully added!")
     main()
+
+# Prompt user to enter the item(s) they want to remove from the inventory
+def remove_from_inventory():
+    item = input("Enter item you want to remove from your inventory(Type 'quit' to end): ").lower().strip()
