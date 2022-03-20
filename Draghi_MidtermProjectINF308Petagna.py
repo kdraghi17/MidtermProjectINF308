@@ -53,4 +53,8 @@ def remove_from_inventory():
         else:
             item = input("Item does not exist. Please try again. Enter item you want to remove from your inventory(Type 'quit' to end): ").lower().strip()
     main()
+
+# Prompt user to enter the item they want to update the value for
+def update_inventory():
+    item = input("Enter item you want to update in your inventory(Type 'quit' to end): ").lower().strip()
     
