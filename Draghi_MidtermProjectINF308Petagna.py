@@ -99,4 +99,18 @@ def clear_inventory():
         else:
             print("Invalid input. Please try again.")
     main()
+
+# Function to quit the program
+def quit_program():
+
+    # Ask the user if they are sure they want to quit using while loop for user error
+    while True:
+        user_answer = input("Are you sure you want to quit?(Y/N): ").lower().strip()
+        if user_answer == "y":
+            quit() # Quit program
+        elif user_answer == "n":
+            break
+        else:
+            print("Invalid input. Please try again.")
+    main()
     
