@@ -119,4 +119,27 @@ def main():
 
     # Add menu function
     mainMenu()
+
+    # Control flow of the program
+    while True:
+        try:
+            choice = int(input("Enter the number that represents your selection: "))
+            if choice == 1:
+                add_to_inventory()
+            elif choice == 2:
+                remove_from_inventory()
+            elif choice == 3:
+                update_inventory()
+            elif choice == 4:
+                view_inventory()
+            elif choice == 5:
+                clear_inventory()
+            elif choice == 6:
+                quit_program()
+            else:
+                print("Not an option. Please try again.")
+                main()
+        except ValueError:
+            print("Invalid input. Please try again. Enter 1-6.")
+            main()
     
