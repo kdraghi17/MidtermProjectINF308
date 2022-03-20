@@ -142,4 +142,6 @@ def main():
         except ValueError:
             print("Invalid input. Please try again. Enter 1-6.")
             main()
+
+main()
     
