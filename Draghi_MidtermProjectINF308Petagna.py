@@ -78,4 +78,9 @@ def update_inventory():
 # Function to view user's inventory
 def view_inventory():
     print("Below is your inventory: ")
+
+    # Display inventory using a for loop in alphabetical order
+    for key, value in sorted(inventory.items()):
+        print(key + ":", value)
+    main()
     
